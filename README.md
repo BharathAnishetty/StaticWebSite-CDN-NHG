@@ -24,9 +24,9 @@ Three environments Dev,Stage and Prod are created and the following files are us
  1. azure-pipeline.yaml
     In this pipline three environments Dev,Stage and Prod are created using three different resource groups.
     The following three variable groups are used to pass pipeline variables (ClientId,Client Secret and Tenant ID)of a Service principle created 
-     a. static-website-variable-group-dev
-     b. static-website-variable-group-stage
-     c. static-website-variable-group-prod 
+     1. static-website-variable-group-dev
+     2. static-website-variable-group-stage
+     3. static-website-variable-group-prod 
  2. azure-deploy-template.yaml
 
  Power Shell Script File (Pester Tests):
