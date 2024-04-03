@@ -1,0 +1,15 @@
+trigger:
+- Dev
+
+stages:
+- stage: Dev
+  jobs:
+  - template: pipeline-templates/azure-deploy-template.yaml
+    parameters:
+      environmentName: 'Dev'
+      azureSubscription: 'svc-sp-staticweb-dev'
+      resourceGroupName: 'staticweb-sp-dev-uks-dev-rg'
+      bicepTemplatePath: '$(Build.SourcesDirectory)/Bicep/main.bicep'
+      parameterFilePath: '$(Build.SourcesDirectory)/Bicep/dev.parameters.json'
+      variableGroup: 'static-website-variable-group-dev'
+
